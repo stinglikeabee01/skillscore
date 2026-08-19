@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Choose Your Course | SkillScore</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Score</span>
+        </div>
+
+    </nav>
+
+
+    <main class="course-page">
+
+        <div class="course-container">
+
+            <div class="step-label">
+                STEP 1 OF 2
+            </div>
+
+            <h1>
+                What are you studying?
+            </h1>
+
+            <p class="course-description">
+                Select your current degree to personalize
+                your assessment.
+            </p>
+
+
+            <div class="course-options">
+
+                <button
+                    class="course-card"
+                    onclick="selectCourse('BSc Computer Science')"
+                >
+
+                    <div class="course-icon">
+                        💻
+                    </div>
+
+                    <div class="course-text">
+
+                        <h2>
+                            BSc Computer Science
+                        </h2>
+
+                        <p>
+                            Computer Science
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="course-card"
+                    onclick="selectCourse('BSc Information Technology')"
+                >
+
+                    <div class="course-icon">
+                        🌐
+                    </div>
+
+                    <div class="course-text">
+
+                        <h2>
+                            BSc Information Technology
+                        </h2>
+
+                        <p>
+                            Information Technology
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </button>
+
+            </div>
+
+
+            <p class="course-note">
+                Your selection helps us personalize your results.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function selectCourse(course) {
+
+            localStorage.setItem("studentCourse", course);
+
+            window.location.href = "test.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+

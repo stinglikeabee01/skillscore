@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SkillScore | Your Results</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Score</span>
+        </div>
+
+        <div class="result-label">
+            Assessment Complete ✓
+        </div>
+
+    </nav>
+
+
+    <!-- RESULTS -->
+
+    <main class="results-page">
+
+        <div class="results-container">
+
+
+            <!-- HEADER -->
+
+            <section class="results-header">
+
+                <div class="result-badge">
+                    ✓ TEST COMPLETED
+                </div>
+
+                <h1>
+                    Your Skill Profile
+                </h1>
+
+                <p>
+                    Here's a breakdown of your current
+                    technical and communication skills.
+                </p>
+
+            </section>
+
+
+            <!-- OVERALL SCORE -->
+
+            <section class="overall-card">
+
+                <div class="overall-score">
+
+                    <span id="overallScore">
+                        0
+                    </span>
+
+                    <small>
+                        /100
+                    </small>
+
+                </div>
+
+                <div class="overall-info">
+
+                    <h2 id="overallTitle">
+                        Calculating...
+                    </h2>
+
+                    <p id="overallDescription">
+                        Your overall assessment result.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- SKILL SCORES -->
+
+            <section class="skills-section">
+
+                <h2>
+                    Your Skills
+                </h2>
+
+                <div class="result-skills">
+
+
+                    <!-- DSA -->
+
+                    <div class="result-skill-card">
+
+                        <div class="skill-heading">
+
+                            <div>
+
+                                <span class="skill-icon">
+                                    🧠
+                                </span>
+
+                                <span>
+                                    DSA
+                                </span>
+
+                            </div>
+
+                            <strong id="dsaScore">
+                                0
+                            </strong>
+
+                        </div>
+
+                        <div class="result-bar">
+
+                            <div
+                                class="result-fill dsa-result"
+                                id="dsaBar"
+                            ></div>
+
+                        </div>
+
+                        <p id="dsaLevel">
+                            Calculating...
+                        </p>
+
+                    </div>
+
+
+                    <!-- PROGRAMMING -->
+
+                    <div class="result-skill-card">
+
+                        <div class="skill-heading">
+
+                            <div>
+
+                                <span class="skill-icon">
+                                    💻
+                                </span>
+
+                                <span>
+                                    Programming
+                                </span>
+
+                            </div>
+
+                            <strong id="programmingScore">
+                                0
+                            </strong>
+
+                        </div>
+
+                        <div class="result-bar">
+
+                            <div
+                                class="result-fill"
+                                id="programmingBar"
+                            ></div>
+
+                        </div>
+
+                        <p id="programmingLevel">
+                            Calculating...
+                        </p>
+
+                    </div>
+
+
+                    <!-- WEB -->
+
+                    <div class="result-skill-card">
+
+                        <div class="skill-heading">
+
+                            <div>
+
+                                <span class="skill-icon">
+                                    🌐
+                                </span>
+
+                                <span>
+                                    Web Development
+                                </span>
+
+                            </div>
+
+                            <strong id="webScore">
+                                0
+                            </strong>
+
+                        </div>
+
+                        <div class="result-bar">
+
+                            <div
+                                class="result-fill"
+                                id="webBar"
+                            ></div>
+
+                        </div>
+
+                        <p id="webLevel">
+                            Calculating...
+                        </p>
+
+                    </div>
+
+
+                    <!-- COMMUNICATION -->
+
+                    <div class="result-skill-card">
+
+                        <div class="skill-heading">
+
+                            <div>
+
+                                <span class="skill-icon">
+                                    🗣️
+                                </span>
+
+                                <span>
+                                    Communication
+                                </span>
+
+                            </div>
+
+                            <strong id="communicationScore">
+                                0
+                            </strong>
+
+                        </div>
+
+                        <div class="result-bar">
+
+                            <div
+                                class="result-fill"
+                                id="communicationBar"
+                            ></div>
+
+                        </div>
+
+                        <p id="communicationLevel">
+                            Calculating...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- STRENGTHS AND WEAKNESS -->
+
+            <section class="analysis-section">
+
+
+                <div class="analysis-card strengths">
+
+                    <div class="analysis-title">
+                        <span>✓</span>
+
+                        <h2>
+                            Your Strengths
+                        </h2>
+                    </div>
+
+                    <div id="strengthsList">
+
+                        <p>
+                            Analyzing your results...
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="analysis-card improvements">
+
+                    <div class="analysis-title">
+                        <span>!</span>
+
+                        <h2>
+                            Areas to Improve
+                        </h2>
+                    </div>
+
+                    <div id="improvementsList">
+
+                        <p>
+                            Analyzing your results...
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ADVICE -->
+
+            <section class="advice-section">
+
+                <div class="advice-header">
+
+                    <span>
+                        💡
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Personalized Advice
+                        </h2>
+
+                        <p>
+                            Based on your assessment performance
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div id="adviceList">
+
+                    <p>
+                        Generating your recommendations...
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ACTIONS -->
+
+            <div class="result-actions">
+
+                <button
+                    class="retake-btn"
+                    onclick="retakeTest()"
+                >
+                    Retake Test
+                </button>
+
+
+                <button
+                    class="home-btn"
+                    onclick="goHome()"
+                >
+                    Back to Home
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        /*
+        ==========================================
+        GET RESULTS
+        ==========================================
+        */
+
+        const savedResults =
+            localStorage.getItem("skillResults");
+
+
+        if (!savedResults) {
+
+            alert("No test results found.");
+
+            window.location.href = "index.html";
+
+        }
+
+
+        const results =
+            JSON.parse(savedResults);
+
+
+        /*
+        ==========================================
+        CALCULATE SCORES
+        ==========================================
+        */
+
+        function calculateScore(category) {
+
+            const correct =
+                results.scores[category];
+
+            const total =
+                results.totals[category];
+
+
+            return Math.round(
+                (correct / total) * 100
+            );
+
+        }
+
+
+        const dsa =
+            calculateScore("DSA");
+
+
+        const programming =
+            calculateScore("Programming");
+
+
+        const web =
+            calculateScore("Web Development");
+
+
+        const communication =
+            calculateScore("Communication");
+
+
+        const overall =
+            Math.round(
+                (
+                    dsa +
+                    programming +
+                    web +
+                    communication
+                ) / 4
+            );
+
+
+        /*
+        ==========================================
+        DISPLAY SCORE
+        ==========================================
+        */
+
+        document.getElementById("overallScore")
+            .textContent = overall;
+
+
+        document.getElementById("dsaScore")
+            .textContent = dsa;
+
+
+        document.getElementById("programmingScore")
+            .textContent = programming;
+
+
+        document.getElementById("webScore")
+            .textContent = web;
+
+
+        document.getElementById("communicationScore")
+            .textContent = communication;
+
+
+        /*
+        ==========================================
+        PROGRESS BARS
+        ==========================================
+        */
+
+        document.getElementById("dsaBar")
+            .style.width = dsa + "%";
+
+
+        document.getElementById("programmingBar")
+            .style.width = programming + "%";
+
+
+        document.getElementById("webBar")
+            .style.width = web + "%";
+
+
+        document.getElementById("communicationBar")
+            .style.width = communication + "%";
+
+
+        /*
+        ==========================================
+        LEVEL
+        ==========================================
+        */
+
+        function getLevel(score) {
+
+            if (score >= 80) {
+
+                return "Strong";
+
+            }
+
+            if (score >= 60) {
+
+                return "Good";
+
+            }
+
+            if (score >= 40) {
+
+                return "Needs Practice";
+
+            }
+
+            return "Needs Improvement";
+
+        }
+
+
+        document.getElementById("overallTitle")
+            .textContent = getLevel(overall);
+
+
+        document.getElementById("dsaLevel")
+            .textContent = getLevel(dsa);
+
+
+        document.getElementById("programmingLevel")
+            .textContent = getLevel(programming);
+
+
+        document.getElementById("webLevel")
+            .textContent = getLevel(web);
+
+
+        document.getElementById("communicationLevel")
+            .textContent = getLevel(communication);
+
+
+        /*
+        ==========================================
+        OVERALL DESCRIPTION
+        ==========================================
+        */
+
+        function getOverallDescription(score) {
+
+            if (score >= 80) {
+
+                return "Excellent foundation. You are ready to challenge yourself with more advanced problems.";
+
+            }
+
+            if (score >= 60) {
+
+                return "You have a good foundation. Focus on your weaker areas to become more confident.";
+
+            }
+
+            if (score >= 40) {
+
+                return "You have started building your skills. Regular practice will help you improve.";
+
+            }
+
+            return "This is a starting point. Focus on the fundamentals and practice consistently.";
+
+        }
+
+
+        document.getElementById("overallDescription")
+            .textContent =
+            getOverallDescription(overall);
+
+
+        /*
+        ==========================================
+        STRENGTHS
+        ==========================================
+        */
+
+        const skillData = [
+
+            {
+                name: "DSA",
+                score: dsa
+            },
+
+            {
+                name: "Programming",
+                score: programming
+            },
+
+            {
+                name: "Web Development",
+                score: web
+            },
+
+            {
+                name: "Communication",
+                score: communication
+            }
+
+        ];
+
+
+        const strengths =
+            skillData
+                .filter(skill => skill.score >= 70)
+                .sort((a, b) => b.score - a.score);
+
+
+        const improvements =
+            skillData
+                .filter(skill => skill.score < 70)
+                .sort((a, b) => a.score - b.score);
+
+
+        const strengthsList =
+            document.getElementById("strengthsList");
+
+
+        const improvementsList =
+            document.getElementById("improvementsList");
+
+
+        if (strengths.length === 0) {
+
+            strengthsList.innerHTML =
+                "<p>Keep practicing — your strengths will develop with time.</p>";
+
+        }
+
+        else {
+
+            strengthsList.innerHTML =
+                strengths
+                    .map(skill =>
+                        `<div class="analysis-item">
+                            <span>✓</span>
+                            <strong>${skill.name}</strong>
+                            <small>${skill.score}/100</small>
+                        </div>`
+                    )
+                    .join("");
+
+        }
+
+
+        if (improvements.length === 0) {
+
+            improvementsList.innerHTML =
+                "<p>Great work! All areas are above 70.</p>";
+
+        }
+
+        else {
+
+            improvementsList.innerHTML =
+                improvements
+                    .map(skill =>
+                        `<div class="analysis-item">
+                            <span>!</span>
+                            <strong>${skill.name}</strong>
+                            <small>${skill.score}/100</small>
+                        </div>`
+                    )
+                    .join("");
+
+        }
+
+
+        /*
+        ==========================================
+        ADVICE
+        ==========================================
+        */
+
+        const advice = [];
+
+
+        if (dsa < 70) {
+
+            advice.push({
+                title: "Improve your DSA fundamentals",
+                text: "Practice arrays, strings, searching, sorting and basic problem-solving. Try solving 2–3 problems regularly."
+            });
+
+        }
+
+        else {
+
+            advice.push({
+                title: "Take your DSA skills further",
+                text: "Your DSA foundation is good. Start practicing medium-level problems and focus on time and space complexity."
+            });
+
+        }
+
+
+        if (programming < 70) {
+
+            advice.push({
+                title: "Strengthen Python and Java",
+                text: "Revise programming fundamentals, functions, OOP, loops, arrays and common problem-solving patterns."
+            });
+
+        }
+
+        else {
+
+            advice.push({
+                title: "Build real programming projects",
+                text: "Your programming fundamentals are good. Apply them by building small Python or Java projects."
+            });
+
+        }
+
+
+        if (web < 70) {
+
+            advice.push({
+                title: "Build your web development foundation",
+                text: "Focus on HTML structure, CSS layouts and JavaScript basics. Build small responsive websites to practice."
+            });
+
+        }
+
+        else {
+
+            advice.push({
+                title: "Go beyond basic web development",
+                text: "Your web foundation is good. Start exploring APIs, responsive design and more interactive JavaScript projects."
+            });
+
+        }
+
+
+        if (communication < 70) {
+
+            advice.push({
+                title: "Practice communication",
+                text: "Practice explaining technical concepts out loud and prepare answers for common interview questions."
+            });
+
+        }
+
+        else {
+
+            advice.push({
+                title: "Keep developing your communication",
+                text: "Your communication foundation is good. Practice mock interviews and explaining technical solutions clearly."
+            });
+
+        }
+
+
+        document.getElementById("adviceList")
+            .innerHTML =
+            advice
+                .map(item =>
+                    `<div class="advice-item">
+                        <h3>${item.title}</h3>
+                        <p>${item.text}</p>
+                    </div>`
+                )
+                .join("");
+
+
+        /*
+        ==========================================
+        BUTTONS
+        ==========================================
+        */
+
+        function retakeTest() {
+
+            localStorage.removeItem("skillResults");
+
+            window.location.href = "test.html";
+
+        }
+
+
+        function goHome() {
+
+            window.location.href = "index.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

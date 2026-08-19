@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillScore | Student Assessment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Score</span>
+        </div>
+
+        <button class="login-btn" onclick="openLogin()">
+            Login
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <main class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🎓 Designed for BSc CS & IT Students
+            </div>
+
+            <h1>
+                Know your skills.<br>
+                <span>Build your future.</span>
+            </h1>
+
+            <p>
+                Take a short assessment to evaluate your
+                DSA, programming, web development and
+                communication skills.
+            </p>
+
+            <button class="start-btn" onclick="openLogin()">
+                Start Assessment →
+            </button>
+
+        </div>
+
+
+        <!-- SIMPLE INFORMATION CARD -->
+        <div class="info-card">
+
+            <h2>One test.<br>Clear understanding.</h2>
+
+            <p>
+                Find out where you are strong,
+                where you need improvement and
+                what you should focus on next.
+            </p>
+
+            <div class="info-item">
+                <span>✓</span>
+                DSA & Problem Solving
+            </div>
+
+            <div class="info-item">
+                <span>✓</span>
+                Python & Java
+            </div>
+
+            <div class="info-item">
+                <span>✓</span>
+                Web Development
+            </div>
+
+            <div class="info-item">
+                <span>✓</span>
+                Communication
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- EVALUATION SECTION -->
+    <section class="evaluation">
+
+        <h2>What will we evaluate?</h2>
+
+        <p class="subtitle">
+            Four areas that matter for your technical growth.
+        </p>
+
+
+        <div class="evaluation-grid">
+
+            <div class="evaluation-card">
+
+                <div class="emoji">🧠</div>
+
+                <h3>DSA</h3>
+
+                <p>
+                    Arrays, searching, sorting, stacks,
+                    queues and problem solving.
+                </p>
+
+            </div>
+
+
+            <div class="evaluation-card">
+
+                <div class="emoji">💻</div>
+
+                <h3>Programming</h3>
+
+                <p>
+                    Python, Java, OOP and programming
+                    fundamentals.
+                </p>
+
+            </div>
+
+
+            <div class="evaluation-card">
+
+                <div class="emoji">🌐</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    HTML, CSS, JavaScript and basic
+                    web concepts.
+                </p>
+
+            </div>
+
+
+            <div class="evaluation-card">
+
+                <div class="emoji">🗣️</div>
+
+                <h3>Communication</h3>
+
+                <p>
+                    Practical questions for evaluating
+                    communication and interview skills.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN POPUP -->
+    <div class="login-overlay" id="loginOverlay">
+
+        <div class="login-box">
+
+            <button class="close" onclick="closeLogin()">
+                ×
+            </button>
+
+            <div class="login-logo">
+                Skill<span>Score</span>
+            </div>
+
+            <h2>Welcome</h2>
+
+            <p>
+                Enter your details to begin.
+            </p>
+
+
+            <form onsubmit="login(event)">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+                <button type="submit" class="continue-btn">
+                    Continue →
+                </button>
+
+            </form>
+
+            <small class="demo">
+                Demo version — no real account required.
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

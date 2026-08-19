@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillScore | Assessment</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Score</span>
+        </div>
+
+        <div class="question-counter">
+            Question <span id="questionNumber">1</span>
+            of <span id="totalQuestions">20</span>
+        </div>
+
+    </nav>
+
+
+    <main class="test-page">
+
+        <div class="test-container">
+
+            <div class="progress-container">
+
+                <div class="progress-bar">
+
+                    <div
+                        class="progress-fill"
+                        id="progressFill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="question-category"
+                id="questionCategory"
+            >
+                DSA
+            </div>
+
+
+            <h1
+                class="question"
+                id="question"
+            >
+                Loading question...
+            </h1>
+
+
+            <div
+                class="options"
+                id="options"
+            ></div>
+
+
+            <div class="test-navigation">
+
+                <button
+                    class="previous-btn"
+                    id="previousBtn"
+                    onclick="previousQuestion()"
+                >
+                    ← Previous
+                </button>
+
+
+                <button
+                    class="next-btn"
+                    id="nextBtn"
+                    onclick="nextQuestion()"
+                >
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+<script>
+
+const questions = [
+
+    /* DSA */
+
+    {
+        category: "DSA",
+        question: "Which data structure follows FIFO?",
+        options: [
+            "Stack",
+            "Queue",
+            "Tree",
+            "Graph"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "DSA",
+        question: "What is the time complexity of binary search?",
+        options: [
+            "O(n)",
+            "O(n²)",
+            "O(log n)",
+            "O(1)"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "DSA",
+        question: "Which data structure follows LIFO?",
+        options: [
+            "Queue",
+            "Stack",
+            "Array",
+            "Graph"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "DSA",
+        question: "Which of these is a sorting algorithm?",
+        options: [
+            "Bubble Sort",
+            "Binary Search",
+            "Linear Search",
+            "BFS"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "DSA",
+        question: "Which data structure is commonly used in BFS?",
+        options: [
+            "Stack",
+            "Queue",
+            "Tree",
+            "Heap"
+        ],
+        answer: 1
+    },
+
+
+    /* PROGRAMMING */
+
+    {
+        category: "Programming",
+        question: "Which language is known for its simple and readable syntax?",
+        options: [
+            "Python",
+            "Assembly",
+            "Machine Code",
+            "COBOL"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Programming",
+        question: "Which keyword is used to define a class in Java?",
+        options: [
+            "function",
+            "define",
+            "class",
+            "object"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Programming",
+        question: "Which concept allows one interface to have different implementations?",
+        options: [
+            "Inheritance",
+            "Polymorphism",
+            "Iteration",
+            "Compilation"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Programming",
+        question: "Which symbol starts a comment in Python?",
+        options: [
+            "//",
+            "/* */",
+            "#",
+            "<!-- -->"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Programming",
+        question: "Which is a Java primitive data type?",
+        options: [
+            "String",
+            "Integer",
+            "int",
+            "Array"
+        ],
+        answer: 2
+    },
+
+
+    /* WEB DEVELOPMENT */
+
+    {
+        category: "Web Development",
+        question: "What does HTML stand for?",
+        options: [
+            "Hyper Text Markup Language",
+            "High Tech Modern Language",
+            "Hyper Transfer Machine Language",
+            "Home Tool Markup Language"
+        ],
+        answer: 0
+    },
+
+    {
+        category: "Web Development",
+        question: "Which language is used to style web pages?",
+        options: [
+            "HTML",
+            "CSS",
+            "Java",
+            "Python"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Web Development",
+        question: "Which language adds interactivity to websites?",
+        options: [
+            "CSS",
+            "HTML",
+            "JavaScript",
+            "SQL"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Web Development",
+        question: "Which HTML tag creates a hyperlink?",
+        options: [
+            "<p>",
+            "<img>",
+            "<a>",
+            "<div>"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Web Development",
+        question: "Which CSS property changes text color?",
+        options: [
+            "font-size",
+            "color",
+            "background",
+            "text-style"
+        ],
+        answer: 1
+    },
+
+
+    /* COMMUNICATION */
+
+    {
+        category: "Communication",
+        question: "What should you do if you don't know an interview answer?",
+        options: [
+            "Make up an answer",
+            "Stay silent",
+            "Be honest and explain how you would find the answer",
+            "Leave the interview"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Communication",
+        question: "What is important during a technical interview?",
+        options: [
+            "Interrupting the interviewer",
+            "Explaining your thinking clearly",
+            "Avoiding questions",
+            "Speaking as quickly as possible"
+        ],
+        answer: 1
+    },
+
+    {
+        category: "Communication",
+        question: "What does active listening involve?",
+        options: [
+            "Waiting for your turn",
+            "Ignoring the speaker",
+            "Understanding and responding to the speaker",
+            "Changing the topic"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Communication",
+        question: "Which behavior shows professionalism?",
+        options: [
+            "Arriving late",
+            "Ignoring questions",
+            "Being respectful and prepared",
+            "Using your phone during an interview"
+        ],
+        answer: 2
+    },
+
+    {
+        category: "Communication",
+        question: "If you disagree with an interviewer, what should you do?",
+        options: [
+            "Argue",
+            "Politely explain your reasoning",
+            "Stop responding",
+            "Leave"
+        ],
+        answer: 1
+    }
+
+];
+
+
+let currentQuestion = 0;
+
+let userAnswers =
+    new Array(questions.length).fill(null);
+
+
+function displayQuestion() {
+
+    const q = questions[currentQuestion];
+
+
+    document.getElementById("questionNumber")
+        .textContent = currentQuestion + 1;
+
+
+    document.getElementById("totalQuestions")
+        .textContent = questions.length;
+
+
+    document.getElementById("questionCategory")
+        .textContent = q.category;
+
+
+    document.getElementById("question")
+        .textContent = q.question;
+
+
+    const optionsContainer =
+        document.getElementById("options");
+
+
+    optionsContainer.innerHTML = "";
+
+
+    q.options.forEach(function(option, index) {
+
+        const button =
+            document.createElement("button");
+
+
+        button.className = "option";
+
+
+        button.textContent = option;
+
+
+        if (userAnswers[currentQuestion] === index) {
+
+            button.classList.add("selected");
+
+        }
+
+
+        button.onclick = function() {
+
+            selectAnswer(index);
+
+        };
+
+
+        optionsContainer.appendChild(button);
+
+    });
+
+
+    updateProgress();
+
+    updateButtons();
+
+}
+
+
+function selectAnswer(index) {
+
+    userAnswers[currentQuestion] = index;
+
+    displayQuestion();
+
+}
+
+
+function updateProgress() {
+
+    const progress =
+        ((currentQuestion + 1) / questions.length) * 100;
+
+
+    document.getElementById("progressFill")
+        .style.width = progress + "%";
+
+}
+
+
+function nextQuestion() {
+
+    if (userAnswers[currentQuestion] === null) {
+
+        alert("Please select an answer first.");
+
+        return;
+
+    }
+
+
+    if (currentQuestion < questions.length - 1) {
+
+        currentQuestion++;
+
+        displayQuestion();
+
+    }
+
+    else {
+
+        finishTest();
+
+    }
+
+}
+
+
+function previousQuestion() {
+
+    if (currentQuestion > 0) {
+
+        currentQuestion--;
+
+        displayQuestion();
+
+    }
+
+}
+
+
+function updateButtons() {
+
+    const previous =
+        document.getElementById("previousBtn");
+
+
+    if (currentQuestion === 0) {
+
+        previous.style.visibility = "hidden";
+
+    }
+
+    else {
+
+        previous.style.visibility = "visible";
+
+    }
+
+
+    const next =
+        document.getElementById("nextBtn");
+
+
+    if (currentQuestion === questions.length - 1) {
+
+        next.textContent = "Submit Test ✓";
+
+    }
+
+    else {
+
+        next.textContent = "Next →";
+
+    }
+
+}
+
+
+function finishTest() {
+
+    const scores = {
+
+        DSA: 0,
+
+        Programming: 0,
+
+        "Web Development": 0,
+
+        Communication: 0
+
+    };
+
+
+    const totals = {
+
+        DSA: 0,
+
+        Programming: 0,
+
+        "Web Development": 0,
+
+        Communication: 0
+
+    };
+
+
+    questions.forEach(function(question, index) {
+
+        totals[question.category]++;
+
+
+        if (userAnswers[index] === question.answer) {
+
+            scores[question.category]++;
+
+        }
+
+    });
+
+
+    const results = {
+
+        scores: scores,
+
+        totals: totals,
+
+        answers: userAnswers,
+
+        totalQuestions: questions.length
+
+    };
+
+
+    localStorage.setItem(
+        "skillResults",
+        JSON.stringify(results)
+    );
+
+
+    window.location.href = "results.html";
+
+}
+
+
+displayQuestion();
+
+</script>
+
+</body>
+
+</html>
