@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Choose Your Career | SkillScore</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Skill<span>Score</span>
+        </div>
+
+    </nav>
+
+
+    <main class="course-page">
+
+        <div class="course-container">
+
+            <div class="step-label">
+                STEP 2 OF 2
+            </div>
+
+            <h1>
+                What career are you preparing for?
+            </h1>
+
+            <p class="course-description">
+                Choose your target career to get a
+                personalized skill assessment.
+            </p>
+
+
+            <div class="course-options">
+
+
+                <!-- SOFTWARE DEVELOPER -->
+
+                <button
+                    class="course-card"
+                    onclick="selectCareer('Software Developer')"
+                >
+
+                    <div class="course-icon">
+                        💻
+                    </div>
+
+                    <div class="course-text">
+
+                        <h2>
+                            Software Developer
+                        </h2>
+
+                        <p>
+                            Programming, DSA & Software Development
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </button>
+
+
+                <!-- WEB DEVELOPER -->
+
+                <button
+                    class="course-card"
+                    onclick="selectCareer('Web Developer')"
+                >
+
+                    <div class="course-icon">
+                        🌐
+                    </div>
+
+                    <div class="course-text">
+
+                        <h2>
+                            Web Developer
+                        </h2>
+
+                        <p>
+                            HTML, CSS, JavaScript & Web Development
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </button>
+
+
+                <!-- DATA ANALYST -->
+
+                <button
+                    class="course-card"
+                    onclick="selectCareer('Data Analyst')"
+                >
+
+                    <div class="course-icon">
+                        📊
+                    </div>
+
+                    <div class="course-text">
+
+                        <h2>
+                            Data Analyst
+                        </h2>
+
+                        <p>
+                            Excel, SQL, Python & Data Analysis
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </button>
+
+
+                <!-- CYBERSECURITY -->
+
+                <button
+                    class="course-card"
+                    onclick="selectCareer('Cybersecurity Analyst')"
+                >
+
+                    <div class="course-icon">
+                        🔐
+                    </div>
+
+                    <div class="course-text">
+
+                        <h2>
+                            Cybersecurity Analyst
+                        </h2>
+
+                        <p>
+                            Networking, Linux & Security
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </button>
+
+
+                <!-- SOFTWARE TESTER -->
+
+                <button
+                    class="course-card"
+                    onclick="selectCareer('Software Tester')"
+                >
+
+                    <div class="course-icon">
+                        🧪
+                    </div>
+
+                    <div class="course-text">
+
+                        <h2>
+                            Software Tester / QA
+                        </h2>
+
+                        <p>
+                            Testing, Debugging & Software Quality
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </button>
+
+
+                <!-- UI UX -->
+
+                <button
+                    class="course-card"
+                    onclick="selectCareer('UI/UX Designer')"
+                >
+
+                    <div class="course-icon">
+                        🎨
+                    </div>
+
+                    <div class="course-text">
+
+                        <h2>
+                            UI/UX Designer
+                        </h2>
+
+                        <p>
+                            User Experience, UI & Design
+                        </p>
+
+                    </div>
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+                </button>
+
+
+            </div>
+
+
+            <p class="course-note">
+                Your career choice determines the questions
+                in your assessment.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function selectCareer(career) {
+
+            localStorage.setItem(
+                "studentCareer",
+                career
+            );
+
+            window.location.href = "test.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
