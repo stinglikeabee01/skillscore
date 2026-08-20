@@ -3,17 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Choose Your Career | SkillScore</title>
+    <title>Choose Career | SkillScore</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
     <nav class="navbar">
 
         <div class="logo">
@@ -23,6 +22,7 @@
     </nav>
 
 
+    <!-- CAREER SELECTION -->
     <main class="course-page">
 
         <div class="course-container">
@@ -36,8 +36,8 @@
             </h1>
 
             <p class="course-description">
-                Choose your target career to get a
-                personalized skill assessment.
+                Choose your target career to get a personalized
+                skill assessment.
             </p>
 
 
@@ -45,11 +45,9 @@
 
 
                 <!-- SOFTWARE DEVELOPER -->
-
                 <button
                     class="course-card"
-                    onclick="selectCareer('Software Developer')"
-                >
+                    onclick="selectCareer('Software Developer')">
 
                     <div class="course-icon">
                         💻
@@ -62,7 +60,7 @@
                         </h2>
 
                         <p>
-                            Programming, DSA & Software Development
+                            Programming, DSA, OOP & Software Development
                         </p>
 
                     </div>
@@ -75,11 +73,9 @@
 
 
                 <!-- WEB DEVELOPER -->
-
                 <button
                     class="course-card"
-                    onclick="selectCareer('Web Developer')"
-                >
+                    onclick="selectCareer('Web Developer')">
 
                     <div class="course-icon">
                         🌐
@@ -105,11 +101,9 @@
 
 
                 <!-- DATA ANALYST -->
-
                 <button
                     class="course-card"
-                    onclick="selectCareer('Data Analyst')"
-                >
+                    onclick="selectCareer('Data Analyst')">
 
                     <div class="course-icon">
                         📊
@@ -134,12 +128,10 @@
                 </button>
 
 
-                <!-- CYBERSECURITY -->
-
+                <!-- CYBERSECURITY ANALYST -->
                 <button
                     class="course-card"
-                    onclick="selectCareer('Cybersecurity Analyst')"
-                >
+                    onclick="selectCareer('Cybersecurity Analyst')">
 
                     <div class="course-icon">
                         🔐
@@ -152,7 +144,7 @@
                         </h2>
 
                         <p>
-                            Networking, Linux & Security
+                            Networking, Linux & Cybersecurity
                         </p>
 
                     </div>
@@ -165,11 +157,9 @@
 
 
                 <!-- SOFTWARE TESTER -->
-
                 <button
                     class="course-card"
-                    onclick="selectCareer('Software Tester')"
-                >
+                    onclick="selectCareer('Software Tester')">
 
                     <div class="course-icon">
                         🧪
@@ -194,12 +184,10 @@
                 </button>
 
 
-                <!-- UI UX -->
-
+                <!-- UI UX DESIGNER -->
                 <button
                     class="course-card"
-                    onclick="selectCareer('UI/UX Designer')"
-                >
+                    onclick="selectCareer('UI/UX Designer')">
 
                     <div class="course-icon">
                         🎨
@@ -223,10 +211,10 @@
 
                 </button>
 
-
             </div>
 
 
+            <!-- INFORMATION -->
             <p class="course-note">
                 Your career choice determines the questions
                 in your assessment.
@@ -237,15 +225,15 @@
     </main>
 
 
+    <!-- JAVASCRIPT -->
     <script>
 
         function selectCareer(career) {
 
-            localStorage.setItem(
-                "studentCareer",
-                career
-            );
+            // Save selected career
+            localStorage.setItem("studentCareer", career);
 
+            // Go to assessment
             window.location.href = "test.html";
 
         }
